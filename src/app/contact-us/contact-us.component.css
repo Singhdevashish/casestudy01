@@ -1,0 +1,54 @@
+.fill {
+    background-color: dimgray;
+    min-height: 100%;
+    min-width: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -100px;
+    vertical-align: bottom;
+}
+
+.form {
+    padding: 10px;
+    background-color: rgb(227, 145, 189);
+    width: 230px;
+}
+
+button {
+    text-align: center;
+    margin-left: 60px;
+}
+
+.message,
+.input {
+    width: 200px;
+}
+
+.help {
+    font-size: 13px;
+    color: white;
+}
+
+.container h1 {
+    color: blue;
+}
+
+.col-md-5 h3,
+.col-md-7 h3 {
+    color: rgb(220, 28, 137);
+}
+
+.container h2 {
+    color: white;
+    margin-left: 170px;
+}
+
+.container h3 {
+    color: rgb(191, 21, 21);
+}
+
+.col-md-5 {
+    color: white;
+    border: 1px solid;
+    align-items: center;
+}

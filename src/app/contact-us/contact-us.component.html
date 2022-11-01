@@ -1,0 +1,60 @@
+<app-header></app-header>
+<div class="conatiner fill">
+
+    <section class="title">
+        <div class="hero-body">
+            <div class="container text-center">
+                <h1>Connect Us!</h1>
+                <hr>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <h2>Connect with us</h2>
+        <div class="row text-center">
+            <div class="col-md-5">
+                <h3>Mumbai</h3>
+                Airoli Unit Nos. 701 702 & 601 7th Office Level & part of 6th Office Level SEZ, Building No.5 & 9, Mindspace-Airoli Thane Belapur Road Navi Mumbai Mumbai 400 708 Maharashtra Tel: 1800 208 6999
+                <p>Email: inquiry@cognizant.com</p>
+            </div>
+            <div class="col-md-5">
+                <h3>Mumbai</h3>
+                Sales & Delivery Office Kensington-SEZ, "A" Wing 12th & 13th Floor Hiranandani Business Park Powai Mumbai 400 076 Maharashtra Tel: 022 61104312
+                <p>Email: inquiry@cognizant.com</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <hr>
+            <h3>If any Query please fill the below form.</h3>
+            <form class="form" (ngSubmit)="submitForm()" #contactForm="ngForm">
+                <div class="field">
+                    <label for="name">Name</label><br>
+                    <input type="text" name="name" class="input is-invalid" [(ngModel)]="name" #nameInput="ngModel" required>
+                    <div class="help is-error" *ngIf="nameInput.invalid && nameInput.touched">
+                        Your name is required
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email" class="input is-invalid" [(ngModel)]="email" #emailInput="ngModel" required email>
+                    <div class="help is-error" *ngIf="nameInput.invalid && nameInput.touched">
+                        Your email is required and needs to be an email.
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="message">Comment :</label><br>
+                    <textarea name="message" class="message" [(ngModel)]="message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-large btn-warning" [disabled]="contactForm.invalid">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </section>
+</div>
+
+
+<app-footer></app-footer>
