@@ -1,12 +1,16 @@
 .fill {
+    background-color: dimgray;
     min-height: 100%;
     min-width: 100%;
+    height: auto !important;
     height: 100%;
+    margin: 0 auto -100px;
+    vertical-align: bottom;
 }
 
 .form {
     padding: 10px;
-    background-color: rgb(203, 218, 225);
+    background-color: rgb(227, 145, 189);
     width: 230px;
 }
 
@@ -34,45 +38,17 @@ button {
     color: rgb(220, 28, 137);
 }
 
-.container1 h2 {
-    color: black;
-    font-size: 20px;
-    font-style: italic;
-    text-align: center;
+.container h2 {
+    color: white;
+    margin-left: 170px;
 }
 
-.container2 h3 {
+.container h3 {
     color: rgb(191, 21, 21);
-    font-size: 20px;
 }
 
 .col-md-5 {
-    color: rgb(12, 12, 12);
+    color: white;
     border: 1px solid;
     align-items: center;
-}
-
-.col-md-5 hr {
-    color: black;
-}
-
-.row {
-    margin-left: 75px;
-}
-
-.container2 {
-    margin-left: 75px;
-    padding: 5px;
-    margin-top: 30px;
-}
-
-.body {
-    background-image: url('src/assets/img/54321.avif');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    margin: 0px;
-    padding: 0px;
-    height: 100%;
-    max-width: 100%;
 }

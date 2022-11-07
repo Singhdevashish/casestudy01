@@ -1,81 +1,79 @@
-   .about-1 {
-       margin: 0px;
-       padding: 25px;
-   }
-   
-   .head {
-       color: rgb(2, 2, 2);
-       font-size: 20px;
-       background-color: #fff;
-       padding: 5px;
-   }
-   
-   .heading {
-       color: rgb(225, 11, 11);
-       font-size: 50px;
-       background-color: #fff;
-       margin-bottom: 0px;
-       text-align: center;
-   }
-   
-   .about-item {
-       margin-bottom: 20px;
-       margin-top: 20px;
-       background-color: white;
-       padding: 80px, 30px;
-       box-shadow: 0 0 9px rgb(0, 0, 0.6);
-       height: 400px;
-       width: 200px;
-   }
-   
-   .about-item h4 {
-       font-size: 25px;
-       margin-bottom: 10px;
-   }
-   
-   .about-item hr {
-       width: 46px;
-       height: 3px;
-       background-color: #5fbff9;
-       margin: 0 auto;
-       border: none;
-   }
-   
-   .about-item p {
-       margin-top: 20px;
-   }
-   
-   .about-item:hover {
-       background-color: #5fbff9;
-   }
-   
-   .about-item:hover h4,
-   .about-item:hover p,
-   .about-item:hover img {
-       color: #fff;
-   }
-   
-   .about-item:hover hr {
-       background-color: #fff;
-   }
-   
-   .about-item:hover img {
-       transform: translateY(-20px);
-   }
-   
-   .about-item:hover h4,
-   .about-item:hover p,
-   .about-item:hover hr {
-       transition: all 400ms ease-in-out;
-   }
-   
-   .fill {
-       background-image: url('src/assets/img/3124512.webp');
-       background-repeat: no-repeat;
-       background-attachment: fixed;
-       background-size: 100% 100%;
-       margin: 0px;
-       padding: 0px;
-       height: 100%;
-       max-width: 100%;
-   }
+.about {
+    margin: 0px;
+}
+
+.about-1 {
+    margin: 0px;
+    padding: 5px;
+}
+
+.about-1 h1 {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.about-1 p {
+    text-align: center;
+    color: #fff;
+    padding: 3px;
+}
+
+.about-item {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: white;
+    padding: 80px, 30px;
+    box-shadow: 0 0 9px rgb(0, 0, 0.6);
+}
+
+.about-item h4 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.about-item hr {
+    width: 46px;
+    height: 3px;
+    background-color: #5fbff9;
+    margin: 0 auto;
+    border: none;
+}
+
+.about-item p {
+    margin-top: 20px;
+}
+
+.about-item:hover {
+    background-color: #5fbff9;
+}
+
+.about-item:hover h4,
+.about-item:hover p,
+.about-item:hover img {
+    color: #fff;
+}
+
+.about-item:hover hr {
+    background-color: #fff;
+}
+
+.about-item:hover img {
+    transform: translateY(-20px);
+}
+
+.about-item:hover h4,
+.about-item:hover p,
+.about-item:hover hr {
+    transition: all 400ms ease-in-out;
+}
+
+.fill {
+    min-height: 100%;
+    max-width: 100%;
+    margin: 0 auto -100px;
+    margin-bottom: 0px;
+    background-color: dimgray;
+    height: auto !important;
+    vertical-align: bottom;
+}
