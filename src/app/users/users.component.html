@@ -1,1 +1,98 @@
-<p>users works!</p>
+<!-- ----------------------------------Header ------------------------------- -->
+<section>
+    <app-header></app-header>
+    <!-- ----------------------------------Header ------------------------------- -->
+    <!-- ----------------------------------Body ------------------------------- -->
+
+    <div class="body" style="margin-left: 200px; height: 100%;">
+        <!-- ----------------------------------CRUD Operation ------------------------------- -->
+
+        <div *ngIf="users;else err" class="container mob-table">
+
+            <div class="headers">
+                <h2 class="table-title">User List</h2>
+                <button class="open-button" (click)="openForm()">ADD USER</button>
+            </div>
+            <hr style="color: black; width: 100%;">
+
+            <!-- ----------------------------------Card ------------------------------- -->
+
+            <div class="col-md-12" style="margin-top: 20px; margin-bottom: 10px;">
+                <div class="row">
+                    <div class="col-md-3" *ngFor="let employee of users | paginate: { itemsPerPage: 6, currentPage: choosePage }" style="margin-left: 90px;">
+                        <div class="card md-3" style="height: 180px; width: 350px; background-color :bisque; margin-bottom: 80px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img [src]="employee.image" class="img-fluid" style="height: 150px; padding: 1px; margin-top: 10px; margin-left: 5px; border: 1px solid black;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+
+                                        <label class="card-title">Name : <span class="card-title text-danger">{{ employee.name }}</span></label><br>
+                                        <label class="card-title">Age : <span class="card-title text-danger">{{ employee.age }}</span></label>
+                                        <br>
+                                        <br>
+                                        <button type="button" class="btn btn-primary" (click)="openForm(employee)">Edit</button>&nbsp;&nbsp;
+                                        <button type="button" class="btn btn-danger" (click)="deleteUser(employee['id'])">Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ----------------------------------Card ------------------------------- -->
+            <!-- ----------------------------------Pagination ------------------------------- -->
+
+            <div class="row" style="left: 100%; margin-bottom: 50px;">
+                <div class="col-md-12 d-flex justify-content-center">
+                    <div *ngFor="let page of pageNumber">
+                    </div>
+                    <hr>
+                    <pagination-controls [class.active]="page == choosePage" (pageChange)="choosePage = $event" class="float-right">
+                    </pagination-controls>
+                </div>
+            </div>
+            <!-- ----------------------------------Pagination ------------------------------- -->
+        </div>
+
+        <ng-template #err>
+            <p class="text-danger">Error : Fetching Data</p>
+        </ng-template>
+
+        <!-- ----------------------------------Form ------------------------------- -->
+
+        <div class="form-wrapper" *ngIf="showForm">
+            <div class="usersform">
+                <h2 class="text-center text-info">{{ formHeader }}</h2>
+
+                <div class="group">
+                    <label for="name">Name: </label>
+                    <input type="text" class="form-control" [(ngModel)]="userName" name="name" required minlength="30">
+                </div>
+                <div class="group">
+                    <label for="age">Age: </label>
+                    <input type="number" class="form-control" [(ngModel)]="age" name="age" required minlength="3">
+                </div>
+                <div class="group">
+                    <label for="image">Upload: </label>&nbsp;
+                    <input type="file" (change)="selectFile($event)">
+                </div>
+
+                <div class="action">
+                    <button type="submit" class="btn btn-primary save" (click)="saveUser()">Save Change</button>
+                    <button type="button" class="btn btn-danger cancel" (click)="closeForm()">Close</button>
+                </div>
+            </div>
+        </div>
+        <!-- ----------------------------------Form------------------------------- -->
+
+        <!-- ----------------------------------CRUD Operation ------------------------------- -->
+    </div>
+    <!-- ----------------------------------Body ------------------------------- -->
+
+    <!-- ----------------------------------Footer ------------------------------- -->
+    <app-footer class="footer" style="width: 100%;"></app-footer>
+    <!-- ----------------------------------Footer ------------------------------- -->
+</section>
