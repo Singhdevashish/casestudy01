@@ -8,17 +8,18 @@ import { UserService } from './user.service';
 })
 export class UsersComponent implements OnInit {
 
-  choosePage:any;
-  itemPerPage :number = 6;
   formHeader = "Add User Info";
-  userName = "";
+  id=null;
+  name = "";
   age: number;
   image: string;
   showForm = false;
   users = null;
-  id=null;
+  choosePage:any;
+  itemPerPage :number = 6;
 
-  constructor(private service: UserService) { }
+  constructor(private service: UserService) {
+   }
 
  /// FormPage Action
 
@@ -33,7 +34,7 @@ export class UsersComponent implements OnInit {
     this.clearForm();
     this.showForm = true;
     if(data) {
-      this.userName = data.name;
+      this.name = data.name;
       this.age = data.age;
       this.image = data.image;
       this.id = data.id;
@@ -51,7 +52,7 @@ export class UsersComponent implements OnInit {
   }
   
   clearForm() {
-    this.userName = null;
+    this.name = null;
     this.age = null;
     this.image = null;
   }
@@ -93,7 +94,7 @@ export class UsersComponent implements OnInit {
         this.users = data;
       },
       (error)=>{
-        console.log("error")
+        console.log("error");
       }
     );
   }
@@ -111,14 +112,14 @@ export class UsersComponent implements OnInit {
     this.showForm = false;
 
     let body = {
-      name: this.userName,
-      age: this.age,
-      image: this.image
+      name:this.name,
+      age:this.age,
+      image:this.image
     }
 
     if(this.id) {
       body['id'] = this.id;
-      this.service.putUser(body).subscribe(
+      this.service.putUser(body,this.id).subscribe(
         (response)=>{
           this.getUser();
         }
@@ -136,7 +137,6 @@ export class UsersComponent implements OnInit {
   //// Service with CRUD operatiion
 
   /// Image Upload
-
 
   selectFile(event) {
     if(event.target.files) {

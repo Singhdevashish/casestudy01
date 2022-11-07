@@ -22,8 +22,8 @@ export class UserService {
     return this.http.post(this.baseurl, body);
   }
 
-  putUser(body) {
-    return this.http.put(this.baseurl, body);
+  putUser(body,id) {
+    return this.http.put(this.baseurl+"/"+id, body);
   }
 
 }
