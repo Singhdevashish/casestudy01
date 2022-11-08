@@ -1,63 +1,58 @@
 {
-    "users": [{
-            "name": "Bharatiya",
-            "age": 24,
-            "image": "../../assets/img/slide2.jpg",
-            "id": 1
-        },
-        {
-            "id": 3,
-            "name": "Devashish",
-            "age": 26,
-            "image": "../../assets/img/slide2.jpg"
-        },
-        {
-            "name": "Singh Devashish",
-            "age": 18,
-            "id": 4,
-            "image": "../../assets/img/slide2.jpg"
-        },
-        {
-            "name": "Singh Devashish",
-            "age": 18,
-            "id": 5,
-            "image": "../../assets/img/slide2.jpg"
-        },
-        {
-            "name": "Singh Devashish",
-            "age": 18,
-            "id": 6,
-            "image": "../../assets/img/slide2.jpg"
-        },
-        {
-            "name": "Singh Devashish",
-            "age": 18,
-            "id": 7,
-            "image": "../../assets/img/slide2.jpg"
-        },
-        {
-            "name": "Singh Devashish",
-            "age": 18,
-            "id": 2,
-            "image": "../../assets/img/slide2.jpg"
-        },
-        {
-            "name": "Singh Devashish",
-            "age": 18,
-            "id": 8,
-            "image": "../../assets/img/slide2.jpg"
-        },
-        {
-            "name": "Singh Devashish",
-            "age": 18,
-            "id": 9,
-            "image": "../../assets/img/slide2.jpg"
-        },
-        {
-            "name": "Singh Devashish",
-            "age": 18,
-            "id": 10,
-            "image": "../../assets/img/slide2.jpg"
-        }
-    ]
+  "users": [
+    {
+      "id": 3,
+      "name": "Devashish",
+      "age": 26,
+      "image": "../../assets/img/slide2.jpg"
+    },
+    {
+      "name": "Singh Devashish",
+      "age": 18,
+      "id": 4,
+      "image": "../../assets/img/slide2.jpg"
+    },
+    {
+      "name": "Singh Devashish",
+      "age": 18,
+      "id": 5,
+      "image": "../../assets/img/slide2.jpg"
+    },
+    {
+      "name": "Singh Devashish",
+      "age": 18,
+      "id": 6,
+      "image": "../../assets/img/slide2.jpg"
+    },
+    {
+      "name": "Singh Devashish",
+      "age": 18,
+      "id": 7,
+      "image": "../../assets/img/slide2.jpg"
+    },
+    {
+      "name": "Singh Devashish",
+      "age": 18,
+      "id": 2,
+      "image": "../../assets/img/slide2.jpg"
+    },
+    {
+      "name": "Singh Devashish",
+      "age": 18,
+      "id": 8,
+      "image": "../../assets/img/slide2.jpg"
+    },
+    {
+      "name": "Singh Devashish",
+      "age": 18,
+      "id": 9,
+      "image": "../../assets/img/slide2.jpg"
+    },
+    {
+      "name": "Singh Devashish",
+      "age": 18,
+      "id": 10,
+      "image": "../../assets/img/slide2.jpg"
+    }
+  ]
 }

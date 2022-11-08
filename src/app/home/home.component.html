@@ -1,22 +1,16 @@
 <app-header></app-header>
 <div class="body">
-    <div class="title">
+    <div class="title" style="">
         <h1>Welcome to Cognizant</h1>
         <p>Cognizant helps companies modernize technology, reimagine processes and transform experiences so they stay ahead in a fast-changing world.</p>
     </div>
-    <div class="info card">
-        <p style="color: red; font-style: italic; font-size: 20px;">“The metaverse is still growing—it’s predicted to be where consumers will shop, learn, socialize, connect and transact. For retailers, this means it’s time to build a strategy that will seize value in this new environment.”</p>
-        <p style="font-weight: bold;">Alexis Scobie Anderson Insights and Strategy Lead for Strategic Growth Studio</p>
-        <hr>
-        <p style="color: red; font-style: italic; font-size: 20px;">“The big bang of digital and 3D experiences is happening, and for retail and commercial banks it means crypto is converging with the metaverse. Although they exist separately today, together they can wield more power.”</p>
-        <p style="font-weight: bold;">Rustin Carpenter Global Payments Solution Leader</p>
-    </div>
+
     <div class="card">
         <ngb-carousel #carousel [interval]="500">
             <ng-template ngbSlide *ngFor="let img of slides; index as i">
                 <a href="https://www.google.fr/?q=Number+{{i+1}}" target="_blank" rel="nofollow noopener noreferrer">
                     <div class="picsum-img-wrapper">
-                        <img [src]="img.img" alt="" width="100%" height="100%" />
+                        <img [src]="img.img" alt="" width="100%" height="650px" />
                     </div>
                 </a>
             </ng-template>
